@@ -16,12 +16,12 @@ const SingleProduct = () => {
   const { id } = useParams();
   const product = allProducts.find((product) => product.id === parseInt(id)); // Ensure id is parsed as an integer
   const colors = ["red", "purple", "teal", "green", "black"];
-  const [selectedColor, setSelectedColor] = useState(null)
+  const [selectedColor, setSelectedColor] = useState(null)    //select krne pr color select hoge
   const handleCircleClick= (color)=>{
     setSelectedColor(color)
   }
   const sizes = ["xs", "s", "m", "l", "xl"];
-const [selectedSize,setSelectedSize] = useState(null)
+const [selectedSize,setSelectedSize] = useState(null)  //select krne pr size select ho jayege...
 const handleSizeClick = (size)=>{
 
 setSelectedSize(size)}
@@ -48,7 +48,7 @@ setSelectedSize(size)}
             <div className="colors-section">
               <h4>Colors</h4>
               <div className="colors">
-                {colors.map((color) => (
+                {colors.map((color) => (   //color map ho jayege...
                   <div key={color} className="color-circle" style={{ backgroundColor: color , outline: selectedColor===color ? `3px solid ${color}` : ""}}onClick={()=>handleCircleClick(color)}></div>
                 ))}
               </div>

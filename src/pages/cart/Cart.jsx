@@ -15,12 +15,11 @@ import { IoClose } from "react-icons/io5";
 const Cart = () => {
   const cartItems = useSelector((state) => state.cartItems);
   const dispatch = useDispatch();
-  const totalPrice = (cartItems || []).reduce(
-    (acc, item) => acc + item.price * item.quantity,0
-    
+  const totalPrice = (cartItems).reduce(
+    (acc, item) => acc + item.price * item.quantity,
+    0
   );
-  
-  
+
   return (
     <div>
       <Navbar />
@@ -29,8 +28,17 @@ const Cart = () => {
           <BiShoppingBag className="cart-icon" />
           <h2 className="cart-title ">Shopping Cart</h2>
         </div>
-        {cartItems.length === 0 ? (
-          <h1 style={{color:"red", alignItems:"center", justifyContent:"center", display:"flex"}}>Your CART is empty</h1>
+        {cartItems.length === 0 ? (  //cart mein agar kuch bhi nhi hoga to 
+          <h1
+            style={{
+              color: "red",
+              alignItems: "center",
+              justifyContent: "center",
+              display: "flex",
+            }}
+          >
+            Your CART is empty
+          </h1>
         ) : (
           <>
             <div className="cart-content">
@@ -46,20 +54,20 @@ const Cart = () => {
                     <div className="cart-product">
                       <img
                         src={item.img}
-                        alt=""
+                        alt=" "
                         className="cart-product-image"
                       />
                       <p>{item.title}</p>
                     </div>
                     <div className="cart-price">₹{item.price}</div>
                     <div className="cart-quantity">
-                      <button
-                        onClick={() => dispatch(decreaseQuantity(item))}
-                      ><GrFormSubtract size={20} /></button>
+                      <button onClick={() => dispatch(decreaseQuantity(item))}>
+                        <GrFormSubtract size={20} />
+                      </button>
                       <span>{item.quantity}</span>
-                      <button
-                        onClick={() => dispatch(increaseQuantity(item))}
-                      ><IoIosAdd size={20}/></button>
+                      <button onClick={() => dispatch(increaseQuantity(item))}>
+                        <IoIosAdd size={20} />
+                      </button>
                     </div>
                     <button
                       className="remove-btn"

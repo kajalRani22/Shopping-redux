@@ -12,8 +12,8 @@ function Navbar()  {
 
     return (
         <nav className="navbar-container">
-            <div className="navbar-wrapper">
-                <div className="navbar-left">
+            <div className="navbar-wrapper" >
+                <div className="navbar-left" >
                     <span className="navbar-language">EN</span>
                     <div className="navbar-searchContainer">
                         <input type="text" placeholder="Search" className="navbar-input" />
@@ -21,8 +21,8 @@ function Navbar()  {
                     </div>
                 </div>
                 <Link to="/">
-                <div className="navbar-center" >
-                    <h1 className="navbar-logo" style={{ alignItems: "center", justifyContent: "center", display: "flex" }}>
+                <div className="navbar-center" style={{marginTop: "-62%"}} >
+                    <h1 className="navbar-logo" style={{ alignItems: "center", justifyContent: "center", display: "flex", marginBottom: "12%"}}>
                         Rise of Coding
                     </h1>
                 </div></Link>

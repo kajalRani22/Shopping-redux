@@ -9,16 +9,16 @@ const cartSlice= createSlice({
         addToCart:(state,action)=>{
             const existingItem = state.cartItems.find(
                 (item)=> item.id=== action.payload.id
-            );
+            ); 
             if(!existingItem){
                 state.cartItems.push({...action.payload, quantity:1})
-            }
-        },
-        removeFromCart:(state,action)=>{
+            }         
+        },                       
+        removeFromCart:(state,action)=>{      
             state.cartItems= state.cartItems.filter(
                 (item)=> item.id !== action.payload.id
             );
-        },
+        },            
         increaseQuantity: (state,action)=>{
             const itemIndex = state.cartItems.findIndex(
                 (item)=> item.id=== action.payload.id
@@ -26,7 +26,7 @@ const cartSlice= createSlice({
             if(itemIndex >=0){
                 state.cartItems[itemIndex].quantity += 1;
             }
-        },
+        },           
         decreaseQuantity: (state,action)=>{
             const itemIndex= state.cartItems.findIndex(
                 (item)=> item.id=== action.payload.id
