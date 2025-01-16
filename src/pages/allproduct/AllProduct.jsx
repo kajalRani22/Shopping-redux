@@ -1,3 +1,4 @@
+// eslint-disable-next-line no-unused-vars
 import React from 'react'
 import { allProducts } from '../../data'
 import Footer from '../../components/Footer/Footer'

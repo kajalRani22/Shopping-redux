@@ -1,4 +1,4 @@
-import React from "react";
+import "react";
 import "./Cart.css";
 import Footer from "../../components/Footer/Footer";
 import Navbar from "../../components/Navbar/Navbar";
@@ -15,11 +15,11 @@ import { IoClose } from "react-icons/io5";
 const Cart = () => {
   const cartItems = useSelector((state) => state.cartItems);
   const dispatch = useDispatch();
-
   const totalPrice = (cartItems || []).reduce(
-    (acc, item) => acc + item.price * item.quantity,
-    0
+    (acc, item) => acc + item.price * item.quantity,0
+    
   );
+  
   
   return (
     <div>

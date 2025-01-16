@@ -1,4 +1,4 @@
-import React,{useState} from 'react'
+import {useState} from 'react'
 import { IoMdArrowDropleft, IoMdArrowDropright } from 'react-icons/io'
 import { sliderItems } from '../../data'
 import { Link } from 'react-router-dom'

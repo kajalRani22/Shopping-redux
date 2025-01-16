@@ -1,4 +1,5 @@
-import React from 'react';
+/* eslint-disable react/prop-types */
+import 'react';
 import { CiShoppingCart, CiSearch } from 'react-icons/ci';
 import './Product.css'
 import { useNavigate } from 'react-router-dom';
